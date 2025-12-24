@@ -2,16 +2,7 @@
 outline: deep
 ---
 
-# Libs
-
-**Libs** são funções pré-definidas do sistema que podem ser utilizadas para **automatizar comportamentos em formulários, validações, gatilhos e consultas**.
-
-Essas funções são escritas previamente em código e disponibilizadas para uso por meio de seus **identificadores**. Nem toda necessidade pode ser atendida por uma Lib existente; quando isso acontecer, é necessário solicitar a criação de uma nova função a um desenvolvedor.
-
-Algumas Libs são executadas no **frontend** (durante a interação do usuário com o formulário), enquanto outras são executadas no **backend** (durante validações ou processamento de dados).
-Essa diferença é indicada na documentação de cada função, quando relevante para o uso.
-
-## Gatilhos
+# Gatilhos
 
 **Gatilhos** são funções que são executadas automaticamente quando o usuário interage com um campo do formulário, normalmente ao **sair do campo** (por exemplo, depois de digitar um valor).
 
@@ -21,9 +12,7 @@ Eles servem para:
 - gerar códigos, ordens ou links;
 - validar dados de forma prática enquanto o usuário preenche o formulário.
 
----
-
-### gatilhoCnpj()
+## gatilhoCnpj()
 
 Busca informações de uma empresa a partir do **CNPJ** informado e preenche automaticamente outros campos do formulário.
 
@@ -44,9 +33,7 @@ Em formulários que possuam campo de CNPJ e que precisem preencher dados da empr
   - limpa os campos relacionados;
   - exibe a mensagem de erro ao usuário.
 
----
-
-### gatilhoCep()
+## gatilhoCep()
 
 Busca informações de endereço a partir do **CEP** informado.
 
@@ -66,9 +53,7 @@ Em formulários que possuam campos de endereço baseados em CEP.
   - limpa os campos de endereço;
   - exibe uma mensagem de erro.
 
----
-
-### gatilhoMenuModulo()
+## gatilhoMenuModulo()
 
 Gera automaticamente o **código do menu** com base no módulo selecionado.
 
@@ -81,9 +66,7 @@ Em formulários de cadastro ou edição de menus.
 - Preenche automaticamente o campo `codigo`.
 - Em caso de erro, exibe a mensagem retornada pelo sistema.
 
----
-
-### gatilhoMenuPai()
+## gatilhoMenuPai()
 
 Define automaticamente a **ordem** e o **link** de um menu com base no menu pai selecionado.
 
@@ -96,9 +79,7 @@ Em menus que possuem hierarquia (menus filhos).
 - Armazena temporariamente o nome do menu pai para uso interno.
 - Em caso de erro, exibe a mensagem correspondente.
 
----
-
-### gatilhoMenuNome()
+## gatilhoMenuNome()
 
 Atualiza automaticamente o **link do menu** conforme o nome digitado.
 
@@ -110,9 +91,7 @@ Em conjunto com menus que possuem link automático.
 - Caso exista um menu pai selecionado, o link é montado respeitando a hierarquia.
 - O link é formatado automaticamente.
 
----
-
-### gatilhoPainelModulo()
+## gatilhoPainelModulo()
 
 Gera automaticamente o **código** e a **ordem** de um painel com base no módulo selecionado.
 
@@ -126,9 +105,7 @@ Em formulários de cadastro ou edição de painéis.
 - Preenche os campos `codigo` e `ordem`.
 - Em caso de erro, exibe a mensagem correspondente.
 
----
-
-### gatilhoMunicipioEstado()
+## gatilhoMunicipioEstado()
 
 Limpa os campos de município ao alterar o estado.
 
@@ -138,9 +115,7 @@ Em formulários onde município depende diretamente do estado selecionado.
 **O que faz**
 - Limpa automaticamente os campos de código e nome do município quando o estado muda.
 
----
-
-### gatilhoMunicipioIBGE()
+## gatilhoMunicipioIBGE()
 
 Busca automaticamente os dados de um município a partir do **código IBGE** ou do **nome**.
 
@@ -160,3 +135,4 @@ Em cadastros de municípios vinculados a um estado.
 - Em caso de erro:
   - limpa os campos;
   - exibe a mensagem correspondente.
+

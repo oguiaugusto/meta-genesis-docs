@@ -12,26 +12,32 @@ export default defineConfig({
       {
         text: 'Básicos',
         items: [
-          { text: 'Criação', link: '/docs/criacao' },
-          { text: 'Edição', link: '/docs/edicao' },
-          { text: 'Remoção', link: '/docs/remocao' },
+          { text: 'Criação', link: '/basicos/criacao' },
+          { text: 'Edição', link: '/basicos/edicao' },
+          { text: 'Remoção', link: '/basicos/remocao' },
         ],
 
       },
       {
         text: 'Objetos',
         items: [
-          { text: 'Diagrama', link: '/docs/diagrama' },
-          { text: 'Diagrama Item', link: '/docs/diagrama-item' },
-          { text: 'Índice', link: '/docs/indice' },
-          { text: 'Consulta', link: '/docs/consulta' },
-          { text: 'Pasta', link: '/docs/pasta' },
+          { text: 'Diagrama', link: '/objetos/diagrama' },
+          { text: 'Diagrama Item', link: '/objetos/diagrama-item' },
+          { text: 'Índice', link: '/objetos/indice' },
+          { text: 'Consulta', link: '/objetos/consulta' },
+          { text: 'Pasta', link: '/objetos/pasta' },
         ]
       },
       {
-        text: 'Avançados',
+        text: 'Libs',
         items: [
-          { text: 'Libs', link: '/docs/libs' },
+          { text: 'Introdução', link: '/libs/introducao' },
+          { text: 'Gatilhos', link: '/libs/gatilhos' },
+          { text: 'Valores Padrão', link: '/libs/valores-padrao' },
+          { text: 'Índices', link: '/libs/indices' },
+          { text: 'Validações', link: '/libs/validacoes' },
+          { text: 'Validações Personalizadas', link: '/libs/validacoes-personalizadas' },
+          { text: 'Lista', link: '/libs/lista' },
         ],
       },
     ],
