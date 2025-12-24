@@ -4,10 +4,10 @@ outline: deep
 
 # Índices
 
-Um **Índice** é um objeto de um [Diagrama](/docs/diagrama) que define a **ordenação padrão** dos registros exibidos nas telas de lista.
+Um **Índice** é um objeto de um [Diagrama](/objetos/diagrama) que define a **ordenação padrão** dos registros exibidos nas telas de lista.
 
 O índice com o **menor valor no campo Ordem** é sempre utilizado como o índice padrão da tabela.  
-Índices também são utilizados para definir a ordenação das [Consultas](/docs/consulta).
+Índices também são utilizados para definir a ordenação das [Consultas](/objetos/consulta).
 
 ## Campos
 
@@ -51,7 +51,7 @@ O índice com o **menor valor no campo Ordem** é sempre utilizado como o índic
   - *Obrigatório: não*
   - *Único: não*
   - *Editável: sim*
-  - *Observação: define a ordenação por meio de uma função. É mutuamente exclusivo com "Campos" e fica desabilitado por padrão. Ver [Funções de Índice](/docs/libs#funcoes-indice)*
+  - *Observação: define a ordenação por meio de uma função. É mutuamente exclusivo com "Campos" e fica desabilitado por padrão. Ver [Índices](/libs/indices)*
 
 - **Campos**
   - *Descrição: define a ordem dos campos utilizados na ordenação*

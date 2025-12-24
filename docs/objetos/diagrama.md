@@ -8,10 +8,10 @@ Um **Diagrama** define a estrutura de uma tabela no banco de dados e a estrutura
 
 Ele funciona como a base para todos os outros objetos, que dependem dele para existir:
 
-- [Diagrama Item](/docs/diagrama-item)
-- [Pasta](/docs/pasta)
-- [Índice](/docs/indice)
-- [Consulta](/docs/consulta)
+- [Diagrama Item](/objetos/diagrama-item)
+- [Pasta](/objetos/pasta)
+- [Índice](/objetos/indice)
+- [Consulta](/objetos/consulta)
 
 ## Campos
 
@@ -73,12 +73,12 @@ Ele funciona como a base para todos os outros objetos, que dependem dele para ex
 - **Botões da Lista**
   - *Descrição: botões exibidos no topo da tela de lista*
   - *Configuração: os botões padrão podem ser selecionados no menu suspenso. Botões extras podem ser adicionados clicando no ícone `+` e preenchendo os campos "Ícone" e "Ação"*
-  - *Observação: mais informações em [Libs](/docs/libs)*
+  - *Observação: mais informações em [Lista](/libs/lista#icones-da-barra-superior)*
 
 - **Botões das Células**
   - *Descrição: botões exibidos no início de cada linha da tabela*
   - *Configuração: os botões padrão podem ser selecionados no menu suspenso. Botões extras podem ser adicionados clicando no ícone `+` e preenchendo os campos "Ícone" e "Ação"*
-  - *Observação: mais informações em [Libs](/docs/libs)*
+  - *Observação: mais informações em [Lista](/libs/lista#acoes-por-linha-celulas)*
 
 ## Aplicar Mudanças
 

@@ -4,7 +4,7 @@ outline: deep
 
 # Diagrama Item
 
-Um **Diagrama Item** é um objeto de um [Diagrama](/docs/diagrama) que representa uma **coluna da tabela** no banco de dados.
+Um **Diagrama Item** é um objeto de um [Diagrama](/objetos/diagrama) que representa uma **coluna da tabela** no banco de dados.
 
 Ele define tanto as características dessa coluna quanto a forma como o campo correspondente é exibido e configurado em tabelas e formulários do sistema.
 
@@ -148,7 +148,7 @@ Campos opcionais que alteram o comportamento padrão do campo.
   - *Obrigatório: não*
   - *Único: não*
   - *Editável: sim*
-  - *Observação: ver [Gatilhos](/docs/libs#gatilhos)*
+  - *Observação: ver [Gatilhos](/libs/gatilhos)*
 
 - **Valor Padrão**
   - *Tipo: texto*
@@ -169,7 +169,7 @@ Campos opcionais que alteram o comportamento padrão do campo.
   - *Obrigatório: não*
   - *Único: não*
   - *Editável: sim*
-  - *Observação: mutuamente exclusivo com "Valor Padrão", "Campo Especial" e "Lista Padrão". Ver [Consultas](/docs/consulta)*
+  - *Observação: mutuamente exclusivo com "Valor Padrão", "Campo Especial" e "Lista Padrão". Ver [Consultas](/objetos/consulta)*
 
 - **Lista Padrão**
   - *Tipo: texto*
@@ -232,14 +232,14 @@ Campos relacionados à validação dos valores informados pelo usuário.
   - *Obrigatório: não (mas geralmente necessário)*
   - *Único: não*
   - *Editável: sim*
-  - *Observação: ver [Validações](/docs/libs#validacoes)*
+  - *Observação: ver [Validações](/libs/validacoes)*
 
 - **Validação Personalizada**
   - *Tipo: texto (função)*
   - *Obrigatório: não*
   - *Único: não*
   - *Editável: sim*
-  - *Observação: ver [Validações Personalizadas](/docs/libs#validacoes-personalizadas)*
+  - *Observação: ver [Validações Personalizadas](/libs/validacoes-personalizadas)*
 
 ## Tipos
 
@@ -328,4 +328,4 @@ Ela controla se o campo pode ser alterado na criação do registro, na edição,
 
 As mudanças nos itens do diagrama são aplicadas juntamente com as mudanças do diagrama ao qual pertencem.
 
-Para mais informações, consulte a seção [Aplicar Mudanças](/docs/diagrama#aplicar-mudancas).
+Para mais informações, consulte a seção [Aplicar Mudanças](/objetos/diagrama#aplicar-mudancas).
