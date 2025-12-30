@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "Meta Genesis"
+  name: "GenesisERP"
   text: ""
-  tagline: Documentação da aplicação Meta Genesis
+  tagline: Documentação da aplicação Genesis
   actions:
     - theme: brand
       text: Documentação

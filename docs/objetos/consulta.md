@@ -41,11 +41,11 @@ Consultas são comumente utilizadas em campos de **chave estrangeira**, listas d
   - *Editável: não*
   - *Observação: define de qual tabela os dados serão buscados*
 
-- **Tabela Pai**
+- **Tabela Genérica**
   - *Tipo: texto (selecionado no menu suspenso)*
   - *Obrigatório: sim (quando exibido)*
   - *Editável: não*
-  - *Observação: utilizado quando a "Tabela da Consulta" representa uma [tabela genérica](/docs/tabelas). Define em qual sub-tabela a consulta será realizada*
+  - *Observação: utilizado quando a "Tabela da Consulta" representa uma [tabela genérica](/glossario#tabela-generica). Define em qual sub-tabela a consulta será realizada*
 
 - **Índice**
   - *Tipo: texto (selecionado no menu suspenso)*

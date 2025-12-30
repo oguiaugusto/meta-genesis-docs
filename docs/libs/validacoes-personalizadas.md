@@ -62,8 +62,3 @@ Essa validação utiliza os seguintes campos do formulário:
 Use essa validação quando for necessário garantir que:
 - o CNPJ é real;
 - os dados informados correspondem a uma empresa oficialmente registrada.
-
-Indicada principalmente para:
-- cadastros de empresas;
-- fornecedores;
-- parceiros comerciais.

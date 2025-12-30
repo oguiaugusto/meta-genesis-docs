@@ -197,7 +197,7 @@ Inclui:
 Inclui:
 
 - Atualizar estrutura
-- Status do registro (conforme enum `StatusCliente`)
+- Status do registro (*"Ativo", "Inativo", "Suspenso" ou "Cancelado"*)
 
 ### Contrato
 

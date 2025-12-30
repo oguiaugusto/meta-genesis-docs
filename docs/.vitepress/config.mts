@@ -1,12 +1,16 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: "Meta Genesis Docs",
-  description: "Documentação da aplicação Meta Genesis",
+  title: "Genesis Docs",
+  description: "Documentação da aplicação Genesis",
   themeConfig: {
+    search: {
+      provider: 'local',
+    },
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Documentação', link: '/docs' },
+      { text: 'Glossário', link: '/glossario' }
     ],
     sidebar: [
       {

@@ -54,14 +54,14 @@ Ele funciona como a base para todos os outros objetos, que dependem dele para ex
   - *Obrigatório: não*
   - *Único: não*
   - *Editável: não*
-  - *Observação: define a exclusividade dos registros por empresa*
+  - *Observação: define a [exclusividade dos registros](/glossario#exclusividade-dos-registros) por empresa*
 
 - **Filial**
   - *Tipo: verdadeiro/falso*
   - *Obrigatório: não*
   - *Único: não*
   - *Editável: não*
-  - *Observação: define a exclusividade dos registros por filial*
+  - *Observação: define a [exclusividade dos registros](/glossario#exclusividade-dos-registros) por filial*
 
 - **Subtítulo**
   - *Tipo: texto*
