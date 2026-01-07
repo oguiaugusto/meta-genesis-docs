@@ -1,8 +1,9 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: "Genesis Docs",
-  description: "Documentação da aplicação Genesis",
+  title: "ERP Genesis",
+  description: "Documentação da aplicação ERP Genesis",
+  base: '/docs',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
@@ -12,7 +13,7 @@ export default defineConfig({
     },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Documentação', link: '/docs' },
+      { text: 'Documentação', link: '/guia' },
       { text: 'Glossário', link: '/glossario' }
     ],
     sidebar: [

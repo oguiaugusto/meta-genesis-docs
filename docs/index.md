@@ -9,6 +9,6 @@ hero:
   actions:
     - theme: brand
       text: Documentação
-      link: /docs
+      link: /guia
 ---
 
