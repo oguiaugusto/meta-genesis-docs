@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "GenesisERP"
+  name: "ERP Genesis"
   text: ""
-  tagline: Documentação da aplicação Genesis
+  tagline: Documentação da aplicação ERP Genesis
   actions:
     - theme: brand
       text: Documentação
