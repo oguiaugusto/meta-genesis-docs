@@ -46,13 +46,6 @@ Campos que definem a estrutura da coluna no banco de dados e seus relacionamento
   - *Editável: não*
   - *Observação: identifica a coluna da tabela no banco de dados. Evite espaços, números ou caracteres especiais*
 
-- **Chave Primária**
-  - *Tipo: texto (selecionado no menu suspenso)*
-  - *Obrigatório: não*
-  - *Único: sim*
-  - *Editável: não*
-  - *Observação: identifica a chave primária da tabela*
-
 - **Tipo**
   - *Tipo: texto (selecionado no menu suspenso)*
   - *Obrigatório: sim*
@@ -292,8 +285,29 @@ Os formatos utilizam os seguintes caracteres especiais:
 
 - **0** — representa um número (0 a 9)
 - **X** — representa um caractere de texto (letra)
+- **~** — indica que todos os caracteres restantes devem seguir o padrão especificado (usado como `~X` ou `~0`)
 
 Seguindo o exemplo do telefone, o formato necessário seria `(00) 0000-0000`.
+
+### Usando o til (~) para campos longos
+
+O til (`~`) permite criar formatos para campos de tamanho variável ou muito longos, sem precisar definir cada caractere individualmente.
+
+Quando você usar `~X` ou `~0` em um formato, todos os caracteres a partir daquele ponto seguirão o padrão especificado:
+
+- **~X** — todos os caracteres restantes devem ser letras
+- **~0** — todos os caracteres restantes devem ser números
+
+**Exemplos:**
+
+- `~X` — aceita apenas letras, de qualquer tamanho (útil para campos de nome, observações, etc.)
+- `000-~X` — três números, seguidos de hífen, seguidos de letras (ex: `123-ABCDEFGH`)
+- `~0` — aceita apenas números, de qualquer tamanho (útil para campos numéricos longos)
+
+**Limitações:**
+- Apenas **um til** pode ser usado por formato
+- O til deve ser seguido obrigatoriamente por `X` ou `0`
+- Quando um formato possui til, ele aceita comprimento infinito
 
 ### Múltiplos formatos
 
@@ -302,15 +316,25 @@ O formulário do Diagrama Item possui três campos de formato: **Formato 1**, **
 Cada formato é aplicado de acordo com a **quantidade de caracteres digitados pelo usuário**.  
 Por isso, cada formato seguinte deve aceitar **mais caracteres** que o anterior.
 
-Exemplo de uso para um campo que aceita CPF e CNPJ:
+**Exemplo de uso para um campo que aceita CPF e CNPJ:**
 
-- **Formato 1**: `000.000.000-00` (CPF)
-- **Formato 2**: `00.000.000/0000-0` (CNPJ)
+- **Formato 1**: `000.000.000-00` (CPF - 11 dígitos)
+- **Formato 2**: `00.000.000/0000-00` (CNPJ - 14 dígitos)
 - **Formato 3**: (vazio)
 
+**Exemplo de uso com til para um campo de código variável:**
+
+- **Formato 1**: `000` (código curto de 3 dígitos)
+- **Formato 2**: `000-~0` (código longo começando com 3 dígitos, seguido de hífen e mais números)
+- **Formato 3**: (vazio)
+
+::: tip Dica
+Se você tiver apenas um formato e quiser que ele aceite qualquer quantidade de caracteres, use o til. Por exemplo, `~X` para campos de texto livre ou `~0` para campos numéricos sem limite fixo.
+:::
+
 ::: warning Atenção!
-Formatos são compatíveis apenas com campos do tipo **texto**.  
-Utilizá-los em campos de outros tipos pode causar erros.
+- Formatos são compatíveis apenas com campos do tipo **texto**. Utilizá-los em campos de outros tipos pode causar erros.
+- Não é possível usar til em mais de um formato simultaneamente, pois ambos aceitariam comprimento infinito.
 :::
 
 
