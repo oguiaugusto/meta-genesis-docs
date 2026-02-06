@@ -71,7 +71,7 @@ Campos que definem a estrutura da coluna no banco de dados e seus relacionamento
   - *Obrigatório: sim (se "Tabela Estrangeira" estiver selecionada)*
   - *Único: não*
   - *Editável: não*
-  - *Observação: coluna que será referenciada. Quando preenchida junto com "Tabela Estrangeira", o tipo e o tamanho do item são ajustados automaticamente e sua edição é desabilitada*
+  - *Observação: coluna referenciada na tabela estrangeira. Esse campo é preenchido automaticamente com o identificador (`id`) da tabela selecionada e é exibido apenas para visualização. Quando preenchido junto com "Tabela Estrangeira", o tipo e o tamanho do item são ajustados automaticamente e sua edição é desabilitada*
 
 - **Chave de Exibição**
   - *Tipo: texto (selecionado no menu suspenso)*
@@ -136,13 +136,6 @@ Campos opcionais que alteram o comportamento padrão do campo.
   - *Editável: sim*
   - *Observação: deve começar com @ e não conter espaços ou caracteres especiais*
 
-- **Gatilho**
-  - *Tipo: texto (função)*
-  - *Obrigatório: não*
-  - *Único: não*
-  - *Editável: sim*
-  - *Observação: ver [Gatilhos](/libs/gatilhos)*
-
 - **Valor Padrão**
   - *Tipo: texto*
   - *Obrigatório: não*
@@ -169,7 +162,7 @@ Campos opcionais que alteram o comportamento padrão do campo.
   - *Obrigatório: não*
   - *Único: não*
   - *Editável: sim*
-  - *Observação: mutuamente exclusivo com "Campo Especial" e "Consulta". Valores separados por "|" (ex: Laranja | Morango | Maçã)*
+  - *Observação: mutuamente exclusivo com "Campo Especial" e "Consulta". Os valores devem ser informados no formato **VALOR = EXIBIÇÃO**, separados por "|" (pipe). O **valor** é o que será salvo no banco de dados, e a **exibição** é o texto mostrado ao usuário. Exemplo: `M = Masculino | F = Feminino`*
 
 ### Uso
 
@@ -285,29 +278,29 @@ Os formatos utilizam os seguintes caracteres especiais:
 
 - **0** — representa um número (0 a 9)
 - **X** — representa um caractere de texto (letra)
-- **~** — indica que todos os caracteres restantes devem seguir o padrão especificado (usado como `~X` ou `~0`)
+- **!** — indica que todos os caracteres restantes devem seguir o padrão especificado (usado como `!X` ou `!0`)
 
 Seguindo o exemplo do telefone, o formato necessário seria `(00) 0000-0000`.
 
-### Usando o til (~) para campos longos
+### Usando o ponto de exclamação (!) para campos longos
 
-O til (`~`) permite criar formatos para campos de tamanho variável ou muito longos, sem precisar definir cada caractere individualmente.
+O ponto de exclamação (`!`) permite criar formatos para campos de tamanho variável ou muito longos, sem precisar definir cada caractere individualmente.
 
-Quando você usar `~X` ou `~0` em um formato, todos os caracteres a partir daquele ponto seguirão o padrão especificado:
+Quando você usar `!X` ou `!0` em um formato, todos os caracteres a partir daquele ponto seguirão o padrão especificado:
 
-- **~X** — todos os caracteres restantes devem ser letras
-- **~0** — todos os caracteres restantes devem ser números
+- **!X** — todos os caracteres restantes devem ser letras
+- **!0** — todos os caracteres restantes devem ser números
 
 **Exemplos:**
 
-- `~X` — aceita apenas letras, de qualquer tamanho (útil para campos de nome, observações, etc.)
-- `000-~X` — três números, seguidos de hífen, seguidos de letras (ex: `123-ABCDEFGH`)
-- `~0` — aceita apenas números, de qualquer tamanho (útil para campos numéricos longos)
+- `!X` — aceita apenas letras, de qualquer tamanho (útil para campos de nome, observações, etc.)
+- `000-!X` — três números, seguidos de hífen, seguidos de letras (ex: `123-ABCDEFGH`)
+- `!0` — aceita apenas números, de qualquer tamanho (útil para campos numéricos longos)
 
 **Limitações:**
-- Apenas **um til** pode ser usado por formato
-- O til deve ser seguido obrigatoriamente por `X` ou `0`
-- Quando um formato possui til, ele aceita comprimento infinito
+- Apenas **um ponto de exclamação** pode ser usado por formato
+- O ponto de exclamação deve ser seguido obrigatoriamente por `X` ou `0`
+- Quando um formato possui ponto de exclamação, ele aceita comprimento infinito
 
 ### Múltiplos formatos
 
@@ -322,19 +315,19 @@ Por isso, cada formato seguinte deve aceitar **mais caracteres** que o anterior.
 - **Formato 2**: `00.000.000/0000-00` (CNPJ - 14 dígitos)
 - **Formato 3**: (vazio)
 
-**Exemplo de uso com til para um campo de código variável:**
+**Exemplo de uso com ponto de exclamação para um campo de código variável:**
 
 - **Formato 1**: `000` (código curto de 3 dígitos)
-- **Formato 2**: `000-~0` (código longo começando com 3 dígitos, seguido de hífen e mais números)
+- **Formato 2**: `000-!0` (código longo começando com 3 dígitos, seguido de hífen e mais números)
 - **Formato 3**: (vazio)
 
 ::: tip Dica
-Se você tiver apenas um formato e quiser que ele aceite qualquer quantidade de caracteres, use o til. Por exemplo, `~X` para campos de texto livre ou `~0` para campos numéricos sem limite fixo.
+Se você tiver apenas um formato e quiser que ele aceite qualquer quantidade de caracteres, use o ponto de exclamação. Por exemplo, `!X` para campos de texto livre ou `!0` para campos numéricos sem limite fixo.
 :::
 
 ::: warning Atenção!
 - Formatos são compatíveis apenas com campos do tipo **texto**. Utilizá-los em campos de outros tipos pode causar erros.
-- Não é possível usar til em mais de um formato simultaneamente, pois ambos aceitariam comprimento infinito.
+- Não é possível usar ponto de exclamação em mais de um formato simultaneamente, pois ambos aceitariam comprimento infinito.
 :::
 
 

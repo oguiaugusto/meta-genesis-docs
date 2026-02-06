@@ -27,7 +27,8 @@ Cada Lib possui regras específicas sobre quais parâmetros aceita e como se com
 
 ## Seções
 
-- [Gatilhos](/libs/gatilhos)
+- [Rotinas](/libs/rotinas)
+- [Ações](/libs/acoes)
 - [Valores Padrão](/libs/valores-padrao)
 - [Índices](/libs/indices)
 - [Validações](/libs/validacoes)

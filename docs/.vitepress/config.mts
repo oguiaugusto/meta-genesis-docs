@@ -34,13 +34,15 @@ export default defineConfig({
           { text: 'Índice', link: '/objetos/indice' },
           { text: 'Consulta', link: '/objetos/consulta' },
           { text: 'Pasta', link: '/objetos/pasta' },
+          { text: 'Gatilhos', link: '/objetos/gatilho' },
         ]
       },
       {
         text: 'Libs',
         items: [
           { text: 'Introdução', link: '/libs/introducao' },
-          { text: 'Gatilhos', link: '/libs/gatilhos' },
+          { text: 'Rotinas', link: '/libs/rotinas' },
+          { text: 'Ações', link: '/libs/acoes' },
           { text: 'Valores Padrão', link: '/libs/valores-padrao' },
           { text: 'Índices', link: '/libs/indices' },
           { text: 'Validações', link: '/libs/validacoes' },

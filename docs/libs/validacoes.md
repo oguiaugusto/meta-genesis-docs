@@ -60,11 +60,11 @@ Define um intervalo permitido:
 - para textos: tamanho mínimo e máximo;
 - para números: valor mínimo e máximo.
 
-### pertence(*valor1, valor2, ...*)
+### contem(*valor1, valor2, ...*)
 
 O valor deve ser **um dos valores informados**.
 
-Exemplo: `pertence("A", "B", "C")`
+Exemplo: `contem("A", "B", "C")`
 
 ## Apenas Strings
 
@@ -138,7 +138,7 @@ Permite definir alternativas válidas.
 
 O campo será aceito se **pelo menos uma** das validações for satisfeita.
 
-Exemplo: `ou(min(5), pertence("A", "B"))`
+Exemplo: `ou(min(5), contem("A", "B"))`
 
 Nesse caso, o valor é válido se:
 - tiver pelo menos 5 caracteres, **ou**

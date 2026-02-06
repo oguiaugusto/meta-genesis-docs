@@ -13,11 +13,12 @@
 - [Índice](/objetos/indice)
 - [Consulta](/objetos/consulta)
 - [Pasta](/objetos/pasta)
+- [Gatilho](/objetos/gatilho)
 
 ## Libs
 
 - [Introdução](/libs/introducao)
-- [Gatilhos](/libs/gatilhos)
+- [Rotinas](/libs/rotinas)
 - [Valores Padrão](/libs/valores-padrao)
 - [Índices](/libs/indices)
 - [Validações](/libs/validacoes)

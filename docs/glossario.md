@@ -94,6 +94,17 @@ Parâmetros permitem que uma mesma função tenha comportamentos diferentes depe
 Abreviação de *regular expression* (expressão regular).  
 Usada para validar ou identificar padrões em textos, como formatos de e-mail, números ou códigos.
 
+### Rota (Endpoint)
+Caminho interno da aplicação que define **qual ação ou tela será acessada**.
+
+Uma rota pode:
+- exibir uma tela (como uma lista ou formulário);
+- executar uma ação específica (como salvar, excluir ou aplicar mudanças);
+- ou fornecer dados para o sistema.
+
+Rotas são utilizadas tanto no frontend quanto no backend e funcionam como
+os “endereços” internos da aplicação.
+
 
 ## S
 
