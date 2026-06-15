@@ -66,11 +66,29 @@ O valor deve ser **um dos valores informados**.
 
 Exemplo: `contem("A", "B", "C")`
 
+### naoContem(*valor1, valor2, ...*)
+
+O valor não pode ser nenhum dos valores informados.
+
+Exemplo: `naoContem("A", "B", "C")`
+
 ## Apenas Strings
 
 ### naoVazio()
 
 O texto não pode estar vazio ou conter apenas espaços.
+
+### inclui(*texto*)
+
+O valor deve conter o texto informado.
+
+Exemplo: `inclui("@")`
+
+### naoInclui(*texto*)
+
+O valor não pode conter o texto informado.
+
+Exemplo: `naoInclui(" ")`
 
 ### tamanho(*valor*)
 

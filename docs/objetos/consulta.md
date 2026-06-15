@@ -53,45 +53,30 @@ Consultas são comumente utilizadas em campos de **chave estrangeira**, listas d
   - *Editável: sim*
   - *Observação: define o índice utilizado para ordenar o resultado da consulta*
 
+- **Campo de Retorno**
+
+  - *Tipo: texto (selecionado no menu suspenso)*
+  - *Obrigatório: sim*
+  - *Editável: sim*
+  - *Observação: define qual campo da tabela consultada será retornado ao formulário quando um registro for selecionado*
+
+- **Campo de Exibição**
+
+  - *Tipo: texto (selecionado no menu suspenso)*
+  - *Obrigatório: não*
+  - *Editável: sim*
+  - *Observação: define qual campo será exibido ao usuário após a seleção. Quando não informado, o sistema utiliza o próprio "Campo de Retorno"*
+
+::: info Dica
+Em consultas utilizadas para chaves estrangeiras, é recomendável retornar o campo `Id` e utilizar o **Campo de Exibição** para mostrar um campo mais descritivo ao usuário.
+:::
+
 ## Colunas da Consulta
 
 Define **quais campos serão exibidos na tabela de resultados** apresentada ao usuário.
 
 - *Configuração:* para adicionar uma coluna, clique no botão `+` e selecione um dos campos da tabela.
 - *Obrigatório:* ao menos uma coluna deve ser configurada.
-
-## Retornos
-
-Retornos definem **quais valores da consulta serão utilizados para preencher campos do formulário** quando um item for selecionado.
-
-Cada retorno associa:
-- um **campo da tabela consultada**
-- a uma **variável**
-
-Quando um item é selecionado, o sistema procura, no formulário atual, campos que possuam essas variáveis configuradas e preenche seus valores automaticamente.
-
-- *Configuração:* para adicionar um retorno, clique no botão `+`, selecione um campo da tabela em **Campo** e informe a variável correspondente.
-- É possível configurar **mais de um retorno** por consulta.
-- Todos os retornos configurados são aplicados simultaneamente.
-
-### Exemplo
-
-Em uma consulta de **Municípios**, podem ser definidos os seguintes retornos:
-
-- `Id` → `@municipioId`
-- `EstadoId` → `@estadoId`
-
-Se o formulário possuir campos com essas variáveis configuradas, ao selecionar um município:
-- o campo do município será preenchido com `@municipioId`;
-- o campo do estado será preenchido automaticamente com `@estadoId`.
-
-### Exibição Personalizada
-
-Opcionalmente, é possível ativar a opção **Exibição Personalizada** para exibir um campo diferente daquele que está sendo retornado.
-
-::: info Dica
-Em consultas utilizadas para chaves estrangeiras, é recomendável retornar o campo `Id` e utilizar a **Exibição Personalizada** para mostrar um campo mais descritivo ao usuário.
-:::
 
 ## Filtros
 
