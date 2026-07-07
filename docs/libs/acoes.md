@@ -470,7 +470,7 @@ Preenche:
 
 **Exemplo:** `proximoCodigoPorModulo(@moduloId, "Menu", set(@codigo, @moduloCodigo))`
 
-### proximaOrdem(valor, chaveFiltro, diagrama, ação)
+### proximaOrdem(campo, valor, chaveFiltro, diagrama, ação)
 
 Busca a próxima ordem baseada em um filtro.
 
@@ -478,4 +478,4 @@ Preenche:
 
 - `@proximaOrdem`
 
-**Exemplo:** `proximaOrdem(@paiId, "paiId", "Menu", set(@ordem, @proximaOrdem))`
+**Exemplo:** `proximaOrdem("ordem", @paiId, "paiId", "Menu", set(@ordem, @proximaOrdem))`
